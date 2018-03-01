@@ -7,12 +7,13 @@ const express = require('express')
     , PORT = process.env.PORT || 4141;
 
 app.post('/', (req, res) => {
+  dfApp = new DialogflowApp({request:req, response:res})
   function welcome(app){
-    app.ask('I am glad that you are interested in creating opportunity! Are you sure you want to proceed with creating opportunity');
+    dfApp.ask('I am glad that you are interested in creating opportunity! Are you sure you want to proceed with creating opportunity');
   }
 
   function oppEmailId(app){
-    app.tell('your email id is captured');
+    dfApp.tell('your email id is captured');
   }
 
   const actionMap = new Map();
