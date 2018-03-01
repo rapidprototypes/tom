@@ -1,7 +1,6 @@
 const express = require('express')
     , app = express()
     , { DialogflowApp } = require('actions-on-google')
-    , dfApp = new DialogflowApp({request:request, response:response})
     , WelcomeIndent = 'input.welcome'
     , OpportunityEmailID = 'input.oppEmailId'
     , PORT = process.env.PORT || 4141;
