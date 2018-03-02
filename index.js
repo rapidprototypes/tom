@@ -7,7 +7,7 @@ const express = require('express')
 
 app.post('/', (req, res) => {
   console.log('req -- > ', req.body);
-  console.log('res -- > ', res);
+  console.log('typeof -- > ', typeof req.body);
   var dfApp = new DialogflowApp({request:req, response:res});
   function welcome(app){
     dfApp.ask('I am glad that you are interested in creating opportunity! Are you sure you want to proceed with creating opportunity');
