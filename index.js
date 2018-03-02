@@ -1,11 +1,13 @@
 const express = require('express')
     , app = express()
+    , http = require('http')
+    , server = http.createServer(app)
     , { DialogflowApp } = require('actions-on-google')
     , WelcomeIndent = 'input.welcome'
     , OpportunityEmailID = 'input.oppEmailId'
     , PORT = process.env.PORT || 4141;
 
-app.post('/', (req, res) => {
+server.post('/', (req, res) => {
   console.log('req -- > ', req.body);
   console.log('req rext - >', req.query);
   console.log('typeof -- > ', typeof(req.body), typeof(req.text), typeof(req));
@@ -23,7 +25,7 @@ app.post('/', (req, res) => {
   actionMap.set(OpportunityEmailID, oppEmailId);
 });
 
-app.listen(PORT, (err, res) => {
+server.listen(PORT, (err, res) => {
   if (err) {
     console.log('err in starting server - > ', err);
   } else {
