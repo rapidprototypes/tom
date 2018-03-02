@@ -6,7 +6,7 @@ const express = require('express')
     , PORT = process.env.PORT || 4141;
 
 app.post('/', (req, res) => {
-  console.log('req -- > ', req);
+  console.log('req -- > ', req.body);
   console.log('res -- > ', res);
   var dfApp = new DialogflowApp({request:req, response:res});
   function welcome(app){
