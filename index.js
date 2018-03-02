@@ -6,11 +6,9 @@ const express = require('express')
     , PORT = process.env.PORT || 4141;
 
 app.post('/', (req, res) => {
-  var request = JSON.parse(req)
-    , response = JSON.parse(res);
-  console.log('req -- > ', request);
-  console.log('res -- > ', response);
-  var dfApp = new DialogflowApp({request:request, response:response});
+  console.log('req -- > ', req);
+  console.log('res -- > ', res);
+  var dfApp = new DialogflowApp({request:req, response:res});
   function welcome(app){
     dfApp.ask('I am glad that you are interested in creating opportunity! Are you sure you want to proceed with creating opportunity');
   }
