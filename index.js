@@ -7,7 +7,7 @@ const express = require('express')
     , OpportunityEmailID = 'input.oppEmailId'
     , PORT = process.env.PORT || 4141;
 
-server.post('/', (req, res) => {
+app.post('/', (req, res) => {
   console.log('req -- > ', req.body);
   console.log('req rext - >', req.query);
   console.log('typeof -- > ', typeof(req.body), typeof(req.text), typeof(req));
