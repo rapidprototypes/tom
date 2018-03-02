@@ -7,7 +7,7 @@ const express = require('express')
 
 app.post('/', (req, res) => {
   console.log('req -- > ', req.body);
-  console.log('req rext - >', req.text);
+  console.log('req rext - >', req.query);
   console.log('typeof -- > ', typeof(req.body), typeof(req.text), typeof(req));
   var dfApp = new DialogflowApp({request:req, response:res});
   function welcome(app){
