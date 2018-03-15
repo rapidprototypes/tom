@@ -31,7 +31,12 @@ app.post('/ping', function(request, response){
 
 app.post('/pong', function(request, response){
     console.log('request -> ', request)
-    response.send('Hello')
+    var speech = 'from webhook';
+    resp = {
+        speech : speech,
+        displayText : speech
+    }
+    response.send(resp)
 })
 
 server.listen(PORT, (err, res) => {
