@@ -23,6 +23,12 @@ app.post('/', (req, res) => {
 //   const actionMap = new Map();
 //   actionMap.set(WelcomeIndent, welcome);
 //   actionMap.set(OpportunityEmailID, oppEmailId);
+    var speech = 'from webhook';
+    res.json({
+        speech : speech,
+        displayText : speech,
+        source : 'webhook-asda-assistant'
+    });
 });
 
 server.listen(PORT, (err, res) => {
