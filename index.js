@@ -26,8 +26,7 @@ app.post('/', (req, res) => {
     var speech = 'from webhook';
     res.json({
         speech : speech,
-        displayText : speech,
-        source : 'webhook-asda-assistant'
+        displayText : speech
     });
 });
 
