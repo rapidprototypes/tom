@@ -7,9 +7,9 @@ const express = require('express')
     // , OpportunityEmailID = 'input.oppEmailId'
     , PORT = process.env.PORT || 4141;
 
-app.post('/ping', function(req, res){
-    console.log('req -- >'. req);
-  console.log('body -- > ', req.body);
+app.post('/ping', function(request, response){
+    console.log('req -- >'. request);
+  console.log('body -- > ', request.body);
 //   var dfApp = new DialogflowApp({request:req, response:res});
 //   function welcome(app){
 //     dfApp.ask('I am glad that you are interested in creating opportunity! Are you sure you want to proceed with creating opportunity');
@@ -23,7 +23,7 @@ app.post('/ping', function(req, res){
 //   actionMap.set(WelcomeIndent, welcome);
 //   actionMap.set(OpportunityEmailID, oppEmailId);
     var speech = 'from webhook';
-    res.json({
+    response.json({
         speech : speech,
         displayText : speech
     });
