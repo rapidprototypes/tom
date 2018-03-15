@@ -29,9 +29,8 @@ const express = require('express')
 //     });
 // });
 
-app.post('/tom', function(request, response){
+app.post('/pong', function(request, response){
     console.log('body -> ', request.body);
-    console.log('actions - > ', request.body.result.action);
     var speech = 'from webhook';
     response.json({
         speech : speech,
